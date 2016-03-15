@@ -80,8 +80,8 @@ class Conversation extends Model {
 
 	public static function findOrCreateBetween(\App\User $user, \App\User $other_user)
 	{
-		$user_participates = $user->privateConversations();
-		$other_user_participates = $other_user->privateConversations();
+		$user_participates = $user->privateConversations()->toArray();
+		$other_user_participates = $other_user->privateConversations()->toArray();
 
 		$static = new static;
 

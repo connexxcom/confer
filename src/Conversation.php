@@ -92,7 +92,7 @@ class Conversation extends Model {
 	public function createBetween($user, $other_user)
 	{
 		$conversation = $this->create([
-			'name' => 'Conversation between ' . $user->name . ' and ' . $other_user->name,
+			'name' => 'Gesprek tussen ' . $user->name . ' en ' . $other_user->name,
 			'is_private' => true
 		]);
 
